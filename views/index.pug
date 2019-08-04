@@ -1,0 +1,35 @@
+extends layouts/base
+
+block content
+
+
+  .comments
+
+    h2.jeux__title Le duel des bâtonnets
+    p Dans ce duel, les candidats se retrouvent en face d’un alignement de 21 bâtonnets.<br>Chacun leur tour ils peuvent en retirer un, deux, ou trois.
+    p Celui qui prend le dernier bâtonnet perd le duel.
+
+    img(src='/img/table.jpg', alt='Miniature')
+        
+    h2.comments__title Commentaires
+
+    ul#comments-list.comments__list.no-list
+
+    if (user)
+      form#comments-form.comments__form
+        .media
+          img.media__avatar(src='https://via.placeholder.com/48', alt='')
+          .media__body
+            div
+              textarea#comments-textarea.comments__textarea(type='text', placeholder='Votre commentaire')
+              input(type='submit', value='Envoyer')
+    else
+      p
+        a(href="/login") Connectez-vous
+        |  ou 
+        a(href="/signup") inscrivez-vous
+        |  pour pouvoir jouer ou publier des commentaires
+  
+block scripts
+  script(src='/lib/jquery-3.3.1.min.js')
+  script(src='/javascript/main.js')

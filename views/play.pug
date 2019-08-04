@@ -1,0 +1,28 @@
+extends layouts/base
+
+block content
+
+  h3 Jeu des Baguettes
+  p
+    | Le jeu des alumettes. C&apos;est un jeu &agrave; deux joueurs. 
+    br
+    | Ils disposent de 21 allumettes. A chaque tour, un joueur enl&egrave;ve 1, 2 ou 3 allumette(s). 
+    br
+    | Celui qui prend la derni&egrave;re perd. Il y a un bouton &quot;(Re) commencer&quot; qui permet d&apos;initialiser le jeu.
+  .contenu
+    h5#joueur
+    #allumImg
+    p#pfeu
+      table
+        tr#trfeu
+    #ini
+      button(type='button', onclick="flam('trfeu','allumImg','nb')")  (re) Commencer 
+      input#nb(type='hidden', name='nb', size='5', value='21')
+      span#error1
+
+
+
+
+block scripts
+  script(src='/lib/jquery-3.3.1.min.js')
+  script(src='/javascript/jeu.js')

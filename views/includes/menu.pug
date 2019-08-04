@@ -1,0 +1,12 @@
+header
+.topnav  
+  a.active(href="/") accueil
+    if (!user)
+      a(href="/login") connexion
+      a(href="/signup") inscription
+    if (user)
+      a(href="/play") jouer
+      a(href="/logout") déconnexion
+br
+if (user)
+    | Bonjour #[strong #{user.username}]

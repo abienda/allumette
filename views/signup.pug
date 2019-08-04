@@ -1,0 +1,82 @@
+extends layouts/base
+
+block content
+  h1 Inscription
+
+  if (error)
+    p.error #{error.message}
+
+  form#signup-form(action="/signup" method="POST" autocomplete="off")
+    div.form-field
+      label(for='username')
+        | Nom d'utilisateur
+        input#username(type='text', name='username', required, autocomplete="off")
+    div.form-field
+      label(for='avatar')
+        | Votre Avatar
+        table
+          tr
+            td 
+              img(src='/img/fone.jpg', alt='avatar adolescente') 
+            td
+              img(src='/img/hone.jpg', alt='avatar adolescent')
+            td
+              img(src='/img/ftwo.jpg', alt='avatar jeune femme')
+            td
+              img(src='/img/htwo.jpg', alt='avatar jeune homme')
+            td
+              img(src='/img/fthree.jpg', alt='avatar femme')
+            td
+              img(src='/img/hthree.jpg', alt='avatar homme')
+          tr
+            td
+              center
+                input(type='radio', name='avatar', value='fone')
+            td 
+              center
+                input(type='radio', name='avatar', value='hone')
+            td 
+              center
+                input(type='radio', name='avatar', value='ftow')
+            td 
+              center
+                input(type='radio', name='avatar', value='htwo')
+            td 
+              center
+                input(type='radio', name='avatar', value='fthree')
+            td 
+              center
+                input(type='radio', name='avatar', value='hthree')
+    div.form-field
+      label(for='email')
+        | Email
+        input#email(type='email', name='email', required, autocomplete="false")
+
+    div.form-field
+      label(for='password')
+        | Mot de passe
+        input#password(type='password', name='password', required, autocomplete='new-password', pattern="(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}")
+
+      #message
+        p#letter.invalid
+          | Une lettre 
+          b minuscule
+        p#capital.invalid
+          | Une lettre 
+          b capitale (majuscule)
+        p#number.invalid
+          | Un 
+          b nombre
+        p#length.invalid
+          | Un minimum de 
+          b 8 caractères
+
+    div.form-field
+      label(for='password_confirmation')
+        | Confirmation mot de passe
+        input#password_confirmation(type='password', name='password_confirmation', autocomplete="off")
+    input(type='submit', value='Connexion')
+
+block scripts
+  script(src="/lib/jquery-3.3.1.min.js")
+  script(src="/javascript/signup.js")

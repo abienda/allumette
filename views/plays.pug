@@ -1,0 +1,78 @@
+extends layouts/base
+
+block content
+
+  table
+  tr
+    td
+    center
+      div
+        img(src='/img/fone.jpg', alt='Avatar joueur 1') 
+        br
+        |Score :
+    td
+    center
+      .verte
+        .jaune
+         table
+          tr
+            td#batonnet1
+              img(src='/img/batonnet1.jpg', height='250')
+            td#batonnet2
+              img(src='/img/batonnet2.jpg', height='250')
+            td#batonnet3
+              img(src='/img/batonnet3.jpg', height='250')
+            td#batonnet4
+              img(src='/img/batonnet4.jpg', height='250')
+            td#batonnet5
+              img(src='/img/batonnet5.jpg', height='250')
+            td#batonnet6
+              img(src='/img/batonnet6.jpg', height='250')
+            td#batonnet7
+              img(src='/img/batonnet7.jpg', height='250')
+            td#batonnet8
+              img(src='/img/batonnet8.jpg', height='250')
+            td#batonnet9
+              img(src='/img/batonnet9.jpg', height='250')
+            td#batonnet10
+              img(src='/img/batonnet10.jpg', height='250')
+            td#batonnet11
+              img(src='/img/batonnet11.jpg', height='250')
+            td#batonnet12
+              img(src='/img/batonnet12.jpg', height='250')
+            td#batonnet13
+              img(src='/img/batonnet13.jpg', height='250')
+            td#batonnet14
+              img(src='/img/batonnet14.jpg', height='250')
+            td#batonnet15
+              img(src='/img/batonnet15.jpg', height='250')
+            td#batonnet16
+              img(src='/img/batonnet16.jpg', height='250')
+            td#batonnet17
+              img(src='/img/batonnet17.jpg', height='250')
+            td#batonnet18
+              img(src='/img/batonnet18.jpg', height='250')
+            td#batonnet19
+              img(src='/img/batonnet19.jpg', height='250')
+            td#batonnet20
+              img(src='/img/batonnet20.jpg', height='250')
+            td#batonnet21
+              img(src='/img/batonnet21.jpg', height='250')
+    td
+    center
+      div
+        img(src='/img/htwo.jpg', alt='Avatar joueur 2')
+        br
+        |Score :
+  tr
+    td
+      label(for='batonnet-select') Nombre de batonnet:
+      select#batonnet-select
+        option(value='1') 1
+        option(value='2') 2
+        option(value='3') 3
+
+
+block scripts
+  script(src='/lib/jquery-3.3.1.min.js')
+  script(src='/javascript/play.js')
