@@ -1,0 +1,176 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.jeux__title {
+  margin-top: 0;
+}
+.comments {
+  max-width: 640px;
+  padding: 2rem;
+  box-shadow: 1px 1px 5px 0 #ddd;
+}
+.comments__title {
+  margin-top: 0;
+}
+.comments__form {
+  margin-top: 1.5rem;
+}
+.comments__textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.comments__item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.comments__item header {
+  margin-bottom: 0.5rem;
+}
+.comments__item p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.comments__item h3 {
+  margin: 0;
+}
+.comments__item footer {
+  font-size: 0.8rem;
+}
+/* Classe utilitaire pour supprimer le style par défaut d'une liste' */
+.no-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/**
+* Le pattern CSS 'media object' est un pattern célèbre permettant de résoudre
+* certaines problématiques de mise en page fréquemment rencontrées comme présenter
+* une image à côté d'un contenu de longueur variable.
+* _______ _____________________________________
+* | img | |              body                 |
+* |     | |                                   |
+* _______ |                                   |
+*         |                                   |
+*         |                                   |
+*         |                                   |
+*         _____________________________________
+**/
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+.media__avatar {
+  padding: 0 1em 0 0;
+}
+.media__body {
+  flex: 1;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+input {
+  display: block;
+}
+.error {
+  color: red;
+}
+.hidden {
+  display: none;
+}
+
+/* Forms */
+input[type="text"].valid,
+input[type="email"].valid,
+input[type="tel"].valid,
+input[type="password"].valid,
+textarea.valid {
+  border: 2px solid #46daaf;
+}
+
+input[type="text"].invalid,
+input[type="email"].invalid,
+input[type="tel"].invalid,
+input[type="password"].invalid,
+textarea.invalid {
+  border: 2px solid red;
+}
+
+/* Validation de mot de passe */
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display: none;
+  position: relative;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+#message *:first-child {
+  margin-top: 0;
+}
+
+#message *:last-child {
+  margin-bottom: 0;
+}
+
+.valid:before {
+  color: green;
+  position: relative;
+  left: -10px;
+  content: "✔";
+}
+
+.invalid:before {
+  color: red;
+  position: relative;
+  left: -10px;
+  content: "✖";
+}
+
+/* menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* jeux */
+.verte {
+  background-image: url("/img/planche2.jpg");
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+
+.jaune {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
